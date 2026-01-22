@@ -114,3 +114,55 @@ body{
   .social{ left: 2rem; bottom: 2rem; }
   .about-img{ width: 210px; height: 210px; }
 }
+
+
+/* Language selector */
+.lang-switch{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1100;
+  display: flex;
+  gap: .5rem;
+  padding: .4rem .5rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.lang-link{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: .3rem .6rem;
+  border-radius: 999px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  transition: transform .12s ease, background-color .12s ease;
+}
+
+.lang-link:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.12);
+}
+
+@media (max-width: 420px){
+  .lang-switch{ top: .75rem; right: .75rem; }
+  .lang-link{ padding: .28rem .5rem; font-size: .9rem; }
+}
+
+
+/* Flag icons inside language selector */
+.lang-link .flag{
+  width: 18px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+  object-fit: cover;
+}
+
